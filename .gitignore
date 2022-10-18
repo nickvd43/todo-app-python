@@ -1,0 +1,6 @@
+[idea]
+.idea
+
+[non-public-files]
+frontend/
+docs/
