@@ -4,7 +4,8 @@ WORKDIR /app
 
 COPY ./requirements.txt /app/requirements.txt
 
-RUN apt-get update && apt-get install -y default-libmysqlclient-dev
+RUN apt-get update && apt-get install default-libmysqlclient-dev gcc -y
+
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
 

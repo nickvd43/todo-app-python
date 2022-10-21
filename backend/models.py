@@ -1,7 +1,7 @@
 from sqlalchemy import Boolean, Column, ForeignKey, Integer, String, DateTime
 from sqlalchemy.orm import relationship
 
-from database import Base
+from .database import Base
 
 class TodoItem(Base):
     __tablename__ = "todo_items"

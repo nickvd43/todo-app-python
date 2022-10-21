@@ -2,7 +2,7 @@ import requests
 import json
 
 if __name__ == "__main__":
-    base_url="http://localhost:80/"
+    base_url="http://127.0.0.1:80/"
 
     todo_item_extension = "todo_item"
     is_alive_extension = "api/check-status"

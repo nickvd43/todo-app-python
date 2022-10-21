@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
 from datetime import datetime as dt
 
-import models, schemas
+from . import models, schemas
 
 def get_todo_item(db: Session, item_id: int):
     return db.query(models.TodoItem).filter(models.TodoItem.item_id == item_id).first()
