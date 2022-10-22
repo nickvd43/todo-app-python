@@ -19,5 +19,6 @@ This will create a docker image from the dockerfile that is present in the proje
 
 `docker-compose up`
 
-And it will launch both the MySQL server and the API. There is a test.py file present with some basic requests so you can test it out yourself. 
+And it will launch both the MySQL server and the API. There is a test.py file present with some basic requests so you can test it out yourself. Once your are running the services you can find the API docs on:
 
+`http://127.0.0.1:80/docs`
