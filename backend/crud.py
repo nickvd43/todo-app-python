@@ -21,4 +21,31 @@ def create_todo_item(db: Session, todo_item: schemas.TodoItemIn):
     db.commit()
     db.refresh(db_todo_item)
 
+
     return db_todo_item
+
+def update_todo_item_description(db: Session, updated_description: str, todo_item: schemas.TodoItemOut):
+    todo_item.task_description = updated_description
+    db.commit()
+    db.refresh(todo_item)
+
+    return todo_item
+
+
+def update_todo_item_status(db: Session, todo_item: schemas.TodoItemOut):
+    if not todo_item.done:
+        todo_item.done = True
+        todo_item.datetime_completed = dt.utcnow()
+    else:
+        todo_item.done = False
+        todo_item.datetime_completed = None
+
+    db.commit()
+    db.refresh(todo_item)
+
+    return todo_item
+
+def remove_todo_item(db: Session, todo_item: schemas.TodoItemOut):
+    db.delete(todo_item)
+    db.commit()
+

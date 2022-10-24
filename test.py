@@ -21,4 +21,3 @@ if __name__ == "__main__":
     # get all todo-items
     r = requests.get(base_url+todo_items_extension)
     print(r.text)
-
